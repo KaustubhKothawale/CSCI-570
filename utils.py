@@ -2,7 +2,7 @@ import sys
 
 
 # Read from the target input file.
-def read_input():
+def read_input_file():
     # get file name from command arguments.
     file = sys.argv[1]
     f = open(file, "r")
@@ -28,7 +28,7 @@ def read_input():
 
 # return 2 generated lists.
 def string_generator_wrapper():
-    base_string_list, index_list1, index_list2 = read_input()
+    base_string_list, index_list1, index_list2 = read_input_file()
     result = [string_generator(index_list1, base_string_list[0]), string_generator(index_list2, base_string_list[1])]
     # print(result)
     return result
@@ -44,12 +44,12 @@ def string_generator(index_list, base_string):
 
 
 # function to write new string to strings.txt file.
-def write_output():
+def save_generated_strings():
     result = string_generator_wrapper()
-    f = open("strings.txt", 'wt')
-    f.write('\n'.join(result))
-    f.close()
+    file = open("strings.txt", 'wt')
+    file.write('\n'.join(result))
+    file.close()
     return result
 
 
-write_output()
+save_generated_strings()

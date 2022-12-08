@@ -30,7 +30,6 @@ def read_input_file():
 def string_generator_wrapper():
     base_string_list, index_list1, index_list2 = read_input_file()
     result = [string_generator(index_list1, base_string_list[0]), string_generator(index_list2, base_string_list[1])]
-    # print(result)
     return result
 
 
@@ -50,6 +49,3 @@ def save_generated_strings():
     file.write('\n'.join(result))
     file.close()
     return result
-
-
-save_generated_strings()

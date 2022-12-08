@@ -1,1 +1,1 @@
-python3 basic_3.py "$1t" "$2"
+python3 basic_3.py "/Users/surbhikhatri/Desktop/UploadedProject/SampleTestCases/input1.txt" "/Users/surbhikhatri/Desktop/UploadedProject/SampleTestCases/output_basic.txt"
